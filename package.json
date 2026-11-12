@@ -1,0 +1,48 @@
+{
+  "name": "dessine-rh",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Gestão de pessoas, benefícios e pagamentos do DP Dessine",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "node --import tsx scripts/serve.ts",
+    "build": "tsc --noEmit && vite build",
+    "start": "node --import tsx scripts/serve.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test --test-concurrency=1 tests/*.test.ts",
+    "db:migrate": "node --import tsx scripts/migrate.ts",
+    "db:admin": "node --import tsx scripts/admin.ts",
+    "db:seed": "node --import tsx scripts/seed.ts",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "@better-auth/drizzle-adapter": "1.7.22",
+    "@electric-sql/pglite": "0.5.16",
+    "better-auth": "1.7.22",
+    "dotenv": "18.0.10",
+    "drizzle-orm": "0.45.4",
+    "express": "5.3.0",
+    "helmet": "8.3.0",
+    "lucide-react": "1.72.0",
+    "pg": "8.23.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.6",
+    "@types/node": "26.6.6",
+    "@types/pg": "8.23.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/supertest": "7.2.1",
+    "@vitejs/plugin-react": "6.3.0",
+    "supertest": "7.3.2",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.8"
+  }
+}

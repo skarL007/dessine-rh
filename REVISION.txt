@@ -1,0 +1,5 @@
+Dessine RH 1.0.0
+Local source commit: 7471e6b262a3f6d4cbafd0e0a1bb5a45a83b12d0
+Branch: main
+Date: 2026-11-12
+Original handoff provenance. The distributed code includes the subsequent validation and fixes described in docs/VALIDACAO.md.

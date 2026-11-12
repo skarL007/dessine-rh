@@ -1,0 +1,15 @@
+node_modules/
+dist/
+public/assets/
+public/index.html
+.env*
+!.env.example
+.data/
+.vercel/
+coverage/
+test-results/
+playwright-report/
+private-exports/
+*.dump
+*.backup
+*.log
