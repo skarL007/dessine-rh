@@ -97,7 +97,7 @@ function PayrollMonth({ month, canEdit, notify }: PageProps) {
       description={`Confira os valores de ${monthLabel(month)}.`}
       action={<>
         <button className="button secondary" onClick={() => window.print()} disabled={!snapshot}><Printer size={16} />Imprimir</button>
-        {!selectedRevision && closed ? <a className="button secondary" href={`/api/export/payroll?month=${month}`} download><Download size={16} />Exportar CSV</a> : null}
+
       </>}
     />
     <section className="panel payroll-history" aria-labelledby="payroll-history-heading">

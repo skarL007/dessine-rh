@@ -1,3 +1,4 @@
+import { demoResponse } from './demo-api';
 import { useCallback, useEffect, useState } from 'react';
 
 export class RequestError extends Error {
@@ -6,7 +7,7 @@ export class RequestError extends Error {
 export async function api<T>(path: string, options: RequestInit = {}): Promise<T> {
   let response: Response;
   try {
-    response = await fetch(path, { ...options, credentials: 'same-origin', headers: { ...(options.body ? { 'Content-Type': 'application/json' } : {}), ...options.headers } });
+    response = demoResponse(path, options);
   } catch (error) {
     if (options.signal?.aborted) throw error;
     throw new RequestError('Não foi possível conectar ao servidor. Verifique sua conexão e tente novamente.', 0);
